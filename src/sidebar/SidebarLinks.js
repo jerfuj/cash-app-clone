@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  AiOutlineClockCircle,
+  AiOutlineDollarCircle,
+  AiOutlineMinusCircle,
+} from 'react-icons/ai';
+import { FaRegUserCircle } from 'react-icons/fa';
 import styles from './SidebarLinks.module.css';
 
 const SidebarLinks = ({ active, setActive }) => {
@@ -18,6 +24,7 @@ const SidebarLinks = ({ active, setActive }) => {
           setActive('Activity');
         }}
       >
+        <AiOutlineClockCircle size={25} style={{ marginRight: '.7rem' }} />
         Activity
       </li>
       <li
@@ -26,6 +33,7 @@ const SidebarLinks = ({ active, setActive }) => {
           setActive('Cash Card');
         }}
       >
+        <AiOutlineDollarCircle size={25} style={{ marginRight: '.7rem' }} />
         Cash Card
       </li>
       <li
@@ -34,9 +42,13 @@ const SidebarLinks = ({ active, setActive }) => {
           setActive('Settings');
         }}
       >
+        <FaRegUserCircle size={25} style={{ marginRight: '.7rem' }} />
         Settings
       </li>
-      <li className={styles.notActive}>Sign Out</li>
+      <li className={styles.notActive}>
+        <AiOutlineMinusCircle size={25} style={{ marginRight: '.7rem' }} />
+        Sign Out
+      </li>
     </ul>
   );
 };

@@ -10,6 +10,11 @@
   height: 20rem;
 }
 
+.active, .notActive {
+  display: flex;
+  align-items: center;
+}
+
 .notActive{
   color: #10ee3c;
 }
